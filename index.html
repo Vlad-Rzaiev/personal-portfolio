@@ -30,126 +30,201 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <header>
-      <nav>
-        <a href="./index.html"
-          >vlad rzaiev&nbsp;
-          <i class="fa-solid fa-code fa-beat-fade"></i>
-        </a>
-        <ul>
-          <li><a href="#about">about</a></li>
-          <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#contacts">contact</a></li>
-        </ul>
-      </nav>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <div class="container">
+        <nav class="menu" id="navbar">
+          <a class="header-logo" href="./index.html">
+            vlad rzaiev&nbsp;
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a class="menu-link" href="#welcome-section">about</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#projects">portfolio</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#contacts">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <!-- MAIN -->
     <main>
-      <section id="about">
-        <h1>Hello , I am Vlad, web developer</h1>
-        <p>You can see my projects bellow</p>
-        <h2>Technologies with which I work:</h2>
-        <ul>
-          <li>html</li>
-          <li>css</li>
-          <li>JavaScript</li>
-          <li>GitHub</li>
-          <li>Figma</li>
-        </ul>
-        <h2>Courses I have completed</h2>
-        <ul>
-          <li><a href="https://goit.global/" target="_blank">GoIt</a></li>
-          <li>
-            <a
-              href="https://www.freecodecamp.org/Vladyslav-Rzaiev"
-              target="_blank"
-              >freeCodeCamp</a
-            >
-          </li>
-        </ul>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="welcome-section">
+        <div class="container">
+          <h1 class="hero-title">Hello , I am Vlad, web developer</h1>
+          <p class="hero-text">You can see my projects bellow</p>
+        </div>
       </section>
-      <section id="portfolio">
-        <h2>my portfolio</h2>
-        <ul class="portfolio-list">
-          <li class="portfolio-item">
-            <a href="vlad-rzaiev.github.io/web-studio-v2.0/" target="_blank">
-              WebStudio
-              <img
-                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773468/webstudio_t7orwe.jpg"
-                alt="main page screen"
-                width="400"
-              />
-            </a>
-          </li>
-          <li class="portfolio-item">
-            <a href="vlad-rzaiev.github.io/simply-chocolate/">
-              Simply Chocolate
-              <img
-                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773029/simply_irerby.jpg"
-                alt="main page screen"
-                width="400"
-              />
-            </a>
-          </li>
-          <li class="portfolio-item">
-            <a
-              href="https://vlad-rzaiev.github.io/business-promotion-practice/"
-            >
-              Business Promotion
-              <img
-                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773300/bp_p0blqs.jpg"
-                alt="main page screen"
-                width="400"
-              />
-            </a>
-          </li>
-          <li class="portfolio-item">
-            <a href="vlad-rzaiev.github.io/landing-page/">
-              Landing Page
-              <img
-                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1727692144/landing-page_hb1vb2.jpg"
-                alt="main page screen"
-                width="400"
-              />
-            </a>
-          </li>
-        </ul>
-        <a href="">See all</a>
+
+      <!-- SKILLS SECTION -->
+      <section class="section-paddings">
+        <div class="container">
+          <h2 class="project-tile">Technologies with which I work:</h2>
+          <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>JavaScript</li>
+            <li>GitHub</li>
+            <li>Figma</li>
+          </ul>
+          <h2 class="project-tile">Courses I have completed</h2>
+          <ul>
+            <li>
+              <a href="https://goit.global/" target="_blank" id="profile-link">
+                GoIt
+                <img
+                  src="https://res.cloudinary.com/dquehaxrj/image/upload/v1727711695/logo_pjtwyp.svg"
+                  alt="goit logo"
+                  width="60"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/Vladyslav-Rzaiev"
+                target="_blank"
+                id="profile-link"
+                >freeCodeCamp&nbsp;<i class="fa-brands fa-free-code-camp"></i
+              ></a>
+            </li>
+            <li>
+              You can also view my projects on GitHub
+              <a
+                href="https://github.com/Vlad-Rzaiev"
+                target="_blank"
+                id="profile-link"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section id="contacts">
-        <h2>Contact wiht me:</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/vladyslav-rzaiev-544b111b0/"
-              target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/jessy.pinkman.3114"
-              target="_blank"
-              >Facebook</a
-            >
-          </li>
-          <li>
-            <a href="https://www.instagram.com/vlad.rzaiev/" target="_blank"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/Vlad-Rzaiev" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="mailto:vlad.rzaev@gmail.com">Send me a mail</a>
-          </li>
-          <li><a href="tel:+48575570883">Call me</a></li>
-        </ul>
+
+      <!-- PROJECTS SECTION -->
+      <section class="section-paddings" id="projects">
+        <div class="container">
+          <h2 class="project-tile">my portfolio</h2>
+          <ul class="portfolio-list">
+            <li class="portfolio-item">
+              <a
+                class="portfolio-link"
+                href="vlad-rzaiev.github.io/web-studio-v2.0/"
+                target="_blank"
+              >
+                WebStudio
+                <img
+                  src="https://res.cloudinary.com/dquehaxrj/image/upload/c_fill,w_300,h_180/v1726773468/webstudio_t7orwe.jpg"
+                  alt="main page screen"
+                  width="300"
+                />
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a
+                class="portfolio-link"
+                href="vlad-rzaiev.github.io/simply-chocolate/"
+              >
+                Simply Chocolate
+                <img
+                  src="https://res.cloudinary.com/dquehaxrj/image/upload/c_fill,w_300,h_180/v1726773029/simply_irerby.jpg"
+                  alt="main page screen"
+                  width="300"
+                />
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a
+                class="portfolio-link"
+                href="https://vlad-rzaiev.github.io/business-promotion-practice/"
+              >
+                Business Promotion
+                <img
+                  src="https://res.cloudinary.com/dquehaxrj/image/upload/c_fill,w_300,h_180/v1726773300/bp_p0blqs.jpg"
+                  alt="main page screen"
+                  width="300"
+                />
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a
+                class="portfolio-link"
+                href="vlad-rzaiev.github.io/landing-page/"
+              >
+                Landing Page
+                <img
+                  src="https://res.cloudinary.com/dquehaxrj/image/upload/c_fill,w_300,h_180/v1727692144/landing-page_hb1vb2.jpg"
+                  alt="main page screen"
+                  width="300"
+                />
+              </a>
+            </li>
+          </ul>
+          <a href="">See all</a>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section-paddings" id="contacts">
+        <div class="container">
+          <h2 class="project-tile">Contact wiht me:</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/vladyslav-rzaiev-544b111b0/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/jessy.pinkman.3114"
+                target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/vlad.rzaiev/" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/Vlad-Rzaiev" target="_blank"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:vlad.rzaev@gmail.com"
+                ><i class="fa-solid fa-envelopes-bulk"></i
+              ></a>
+            </li>
+            <li>
+              <a href="tel:+48575570883"
+                ><i class="fa-solid fa-phone-volume"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
+
+    <!-- PAGE FOOTER -->
     <footer>
-      <p>&#169; Created by <a href="./index.html">Vladyslav Rzaiev</a></p>
+      <div class="container">
+        <p>
+          Copyright &#169; 2024. Created by
+          <a href="./index.html">Vladyslav Rzaiev</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
