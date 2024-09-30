@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal portfolio</title>
+    <title>Personal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link
       rel="stylesheet"
@@ -13,16 +28,128 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1>Hello this is my portfolio</h1>
+    <header>
+      <nav>
+        <a href="./index.html"
+          >vlad rzaiev&nbsp;
+          <i class="fa-solid fa-code fa-beat-fade"></i>
+        </a>
+        <ul>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contacts">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h1>Hello , I am Vlad, web developer</h1>
+        <p>You can see my projects bellow</p>
+        <h2>Technologies with which I work:</h2>
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>JavaScript</li>
+          <li>GitHub</li>
+          <li>Figma</li>
+        </ul>
+        <h2>Courses I have completed</h2>
+        <ul>
+          <li><a href="https://goit.global/" target="_blank">GoIt</a></li>
+          <li>
+            <a
+              href="https://www.freecodecamp.org/Vladyslav-Rzaiev"
+              target="_blank"
+              >freeCodeCamp</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="portfolio">
+        <h2>my portfolio</h2>
+        <ul class="portfolio-list">
+          <li class="portfolio-item">
+            <a href="vlad-rzaiev.github.io/web-studio-v2.0/" target="_blank">
+              WebStudio
+              <img
+                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773468/webstudio_t7orwe.jpg"
+                alt="main page screen"
+                width="400"
+              />
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="vlad-rzaiev.github.io/simply-chocolate/">
+              Simply Chocolate
+              <img
+                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773029/simply_irerby.jpg"
+                alt="main page screen"
+                width="400"
+              />
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a
+              href="https://vlad-rzaiev.github.io/business-promotion-practice/"
+            >
+              Business Promotion
+              <img
+                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1726773300/bp_p0blqs.jpg"
+                alt="main page screen"
+                width="400"
+              />
+            </a>
+          </li>
+          <li class="portfolio-item">
+            <a href="vlad-rzaiev.github.io/landing-page/">
+              Landing Page
+              <img
+                src="https://res.cloudinary.com/dquehaxrj/image/upload/v1727692144/landing-page_hb1vb2.jpg"
+                alt="main page screen"
+                width="400"
+              />
+            </a>
+          </li>
+        </ul>
+        <a href="">See all</a>
+      </section>
+      <section id="contacts">
+        <h2>Contact wiht me:</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/vladyslav-rzaiev-544b111b0/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/jessy.pinkman.3114"
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/vlad.rzaiev/" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/Vlad-Rzaiev" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="mailto:vlad.rzaev@gmail.com">Send me a mail</a>
+          </li>
+          <li><a href="tel:+48575570883">Call me</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&#169; Created by <a href="./index.html">Vladyslav Rzaiev</a></p>
+    </footer>
   </body>
 </html>
