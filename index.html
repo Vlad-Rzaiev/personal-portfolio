@@ -34,8 +34,8 @@
   <body>
     <!-- PAGE HEADER -->
     <header class="page-header">
-      <div class="container">
-        <nav class="menu" id="navbar">
+      <div class="container header-container">
+        <nav class="menu">
           <a class="header-logo" href="./index.html">
             vlad rzaiev&nbsp;
             <i class="fa-solid fa-code"></i>
@@ -52,6 +52,63 @@
             </li>
           </ul>
         </nav>
+
+        <button class="header-menu-btn" type="button" data-menu-open>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile-overlay" data-menu>
+        <div class="mobile-container container">
+          <button class="mobile-close-btn" type="button" data-menu-close>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <nav class="mobile-menu">
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="">about</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="">portfolio</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="">contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-social-list">
+            <li>
+              <a
+                class="mobile-social-link"
+                href="https://www.linkedin.com/in/vladyslav-rzaiev-544b111b0/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="mobile-social-link"
+                href="https://github.com/Vlad-Rzaiev"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="mobile-social-link"
+                href="https://www.facebook.com/jessy.pinkman.3114"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -266,5 +323,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
