@@ -73,6 +73,22 @@ button {
   letter-spacing: 2px;
   margin-bottom: 24px;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .general-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
 /*=============== /COMMON STYLES ===============*/
 
 /*=============== HEADER STYLES ===============*/
@@ -138,6 +154,52 @@ button {
   text-shadow: 1px 1px 1px #212121;
   color: var(--blue);
 }
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding: 0;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    margin: 0;
+  }
+
+  .menu-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .menu-item:not(:last-child) {
+    margin: 0;
+  }
+
+  .menu-link {
+    display: block;
+    padding: 24px 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-logo {
+    font-size: 20px;
+    max-width: 135px;
+  }
+
+  .header-logo:hover,
+  .header-logo:focus {
+    transform: scale(1.2);
+  }
+
+  .menu-link {
+    font-size: 20px;
+  }
+}
 /*=============== /HEADER STYLES ===============*/
 
 /*=============== HERO STYLES ===============*/
@@ -169,6 +231,13 @@ button {
   line-height: 1.5;
   letter-spacing: 3px;
   text-shadow: 6px 11px 6px #1a1a1a, -7px -10px 6px #0d0d0d;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 60px;
+    max-width: 570px;
+  }
 }
 /*=============== /HERO STYLES ===============*/
 
@@ -211,6 +280,7 @@ button {
   display: flex;
   gap: 12px;
   justify-content: center;
+  align-items: center;
   max-width: 120px;
   margin: 0 auto;
 }
@@ -232,6 +302,20 @@ button {
 #profile-link:hover,
 #profile-link:focus {
   background-color: blue;
+}
+
+@media screen and (min-width: 768px) {
+  .courses-item {
+    font-size: 22px;
+  }
+
+  .courses-item:nth-child(1) > #profile-link {
+    max-width: 150px;
+  }
+
+  .courses-img {
+    width: 100px;
+  }
 }
 /*=============== /SKILLS STYLES ===============*/
 
@@ -312,6 +396,71 @@ button {
 .portfolio-link-btn:focus .additional-parenthesis {
   opacity: 1;
 }
+
+.portfolio-link-btn:hover .additional-parenthesis.left,
+.portfolio-link-btn:focus .additional-parenthesis.left {
+  animation: 1.5s linear infinite anim-btn-left;
+}
+
+.portfolio-link-btn:hover .additional-parenthesis.right,
+.portfolio-link-btn:focus .additional-parenthesis.right {
+  animation: 1.5s linear infinite anim-btn-right;
+}
+
+@keyframes anim-btn-left {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-btn-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 672px;
+    margin: 0 auto 50px;
+  }
+
+  .portfolio-item {
+    max-width: calc((100% - 32px) / 2);
+  }
+
+  .portfolio-link-btn {
+    width: 170px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-list {
+    max-width: 1024px;
+  }
+
+  .portfolio-item {
+    max-width: calc((100% - 64px) / 3);
+  }
+}
 /*=============== /PROJECTS STYLES ===============*/
 
 /*=============== FOOTER STYLES ===============*/
@@ -333,18 +482,6 @@ button {
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 80px;
-  position: relative;
-}
-
-.footer-list::after {
-  width: 100%;
-  height: 2px;
-  background-color: red;
-  border-radius: 50%;
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -65px;
 }
 
 .footer-link {
@@ -362,6 +499,17 @@ button {
   transform: translateY(25%);
 }
 
+.footer-text::before {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -14px;
+}
+
 .footer-text {
   padding-left: 12px;
   position: relative;
@@ -371,8 +519,8 @@ button {
   color: var(--gradient2);
   font-size: 18px;
   position: absolute;
-  top: -6px;
-  right: 10px;
+  top: -7px;
+  right: 12px;
   padding: 5px;
   perspective: 1000px;
   transition: transform 1500ms linear, color 1500ms linear;
@@ -382,5 +530,48 @@ button {
 .footer-text-link:focus {
   color: var(--gradient1);
   transform: rotateX(360deg);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-title {
+    max-width: 500px;
+    margin: 0 auto 60px;
+  }
+
+  .footer-list {
+    max-width: 450px;
+    margin: 0 auto 100px;
+  }
+
+  .footer-text::before {
+    left: 74px;
+  }
+
+  .footer-text {
+    text-align: center;
+    transform: translateX(-74px);
+  }
+
+  .footer-text-link {
+    right: 155px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-list {
+    max-width: 500px;
+  }
+
+  .footer-text::before {
+    left: 50px;
+  }
+
+  .footer-text {
+    transform: translateX(-50px);
+  }
+
+  .footer-text-link {
+    right: 350px;
+  }
 }
 /*=============== /FOOTER STYLES ===============*/
