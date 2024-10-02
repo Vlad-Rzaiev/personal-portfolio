@@ -3,7 +3,7 @@
   --blue: #001aff;
   --white: #ffffff;
   --yellow: #fff200;
-  --black: #000000;
+  --cutomblack: #000000;
   --orange: #ff5a30;
   --section-color: #303841;
   --gradient1: #f7ff00;
@@ -13,7 +13,7 @@
 body {
   font-family: 'Oswald', sans-serif;
   background-color: var(--white);
-  color: var(--black);
+  color: var(--cutomblack);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -181,7 +181,7 @@ button {
   height: 100%;
   padding-top: 70px;
   padding-bottom: 30px;
-  background-color: var(--black);
+  background-color: var(--cutomblack);
   color: var(--white);
   transform: translateX(0%);
   transition: transform 250ms linear;
@@ -379,14 +379,19 @@ button {
 }
 
 .fa-brands.fa-github {
-  columns: var(--black);
+  color: var(--cutomblack);
 }
 
 .fa-brands.fa-figma {
   color: var(--orange);
 }
 
-.courses-item:nth-child(1) > #profile-link {
+.courses-list {
+  margin-bottom: 32px;
+  font-size: 19px;
+}
+
+.courses-item:nth-child(1) > .courses-link {
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -403,15 +408,54 @@ button {
   text-align: center;
 }
 
-#profile-link {
+.courses-link {
   padding: 4px;
   border-radius: 6px;
   transition: background-color 250ms linear;
 }
 
-#profile-link:hover,
-#profile-link:focus {
+.courses-link:hover,
+.courses-link:focus {
   background-color: blue;
+}
+
+.certificates-list {
+  font-size: 19px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.certificates-item {
+  position: relative;
+}
+
+.certificates-link {
+  border-radius: 6px;
+  padding: 4px;
+  transition: background-color 250ms linear;
+}
+
+.hover-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+.certificates-link:hover,
+.certificates-link:focus {
+  background-color: var(--blue);
+}
+
+.certificates-link:hover .hover-image,
+.certificates-link:focus .hover-image {
+  opacity: 1;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -419,7 +463,7 @@ button {
     font-size: 22px;
   }
 
-  .courses-item:nth-child(1) > #profile-link {
+  .courses-item:nth-child(1) > .courses-link {
     max-width: 150px;
   }
 
@@ -442,7 +486,7 @@ button {
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  row-gap: 32px;
   margin-bottom: 40px;
 }
 
@@ -450,8 +494,7 @@ button {
   background-color: var(--white);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 2px 1px 0 rgb(255, 255, 255), 0 1px 1px 0 rgb(255, 255, 255),
-    0 1px 6px 0 rgb(255, 255, 255);
+  box-shadow: 0px 0px 24px 4px rgba(18, 194, 255, 0.43);
 }
 
 .portfolio-link-title {
@@ -546,7 +589,8 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 672px;
+    column-gap: 32px;
+    max-width: 100%;
     margin: 0 auto 50px;
   }
 
@@ -564,18 +608,25 @@ button {
 
 @media screen and (min-width: 1158px) {
   .portfolio-list {
-    max-width: 1024px;
+    max-width: 100%;
   }
 
   .portfolio-item {
     max-width: calc((100% - 64px) / 3);
+    box-shadow: none;
+    transition: box-shadow 250ms linear;
+  }
+
+  .portfolio-item:hover,
+  .portfolio-item:focus {
+    box-shadow: 0px 0px 24px 4px rgba(18, 194, 255, 0.43);
   }
 }
 /*=============== /PROJECTS STYLES ===============*/
 
 /*=============== FOOTER STYLES ===============*/
 .page-footer {
-  background-color: var(--black);
+  background-color: var(--cutomblack);
   color: var(--white);
   padding-top: 100px;
   padding-bottom: 20px;
@@ -621,25 +672,27 @@ button {
 }
 
 .footer-text {
-  padding-left: 12px;
+  text-align: center;
   position: relative;
 }
 
 .footer-text-link {
   color: var(--gradient2);
   font-size: 18px;
-  position: absolute;
-  top: -7px;
-  right: 12px;
-  padding: 5px;
-  perspective: 1000px;
-  transition: transform 1500ms linear, color 1500ms linear;
+  transition: color 250ms linear;
 }
 
 .footer-text-link:hover,
-.footer-text-link:focus {
+.footer-text-link:focus,
+.footer-text-link:hover .fa-angles-up,
+.footer-text-link:focus .fa-angles-up {
   color: var(--gradient1);
-  transform: rotateX(360deg);
+  opacity: 1;
+}
+
+.fa-angles-up {
+  opacity: 0;
+  transition: opacity 500ms linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -653,35 +706,14 @@ button {
     margin: 0 auto 100px;
   }
 
-  .footer-text::before {
-    left: 74px;
-  }
-
   .footer-text {
-    text-align: center;
-    transform: translateX(-74px);
-  }
-
-  .footer-text-link {
-    right: 155px;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer-list {
     max-width: 500px;
-  }
-
-  .footer-text::before {
-    left: 50px;
-  }
-
-  .footer-text {
-    transform: translateX(-50px);
-  }
-
-  .footer-text-link {
-    right: 350px;
   }
 }
 /*=============== /FOOTER STYLES ===============*/
