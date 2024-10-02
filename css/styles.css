@@ -322,6 +322,9 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--white);
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
