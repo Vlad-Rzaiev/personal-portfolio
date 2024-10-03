@@ -95,7 +95,7 @@ button {
 .page-header {
   text-transform: uppercase;
   border-bottom: 1px solid var(--blue);
-  background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+  background: linear-gradient(to bottom, var(--yellow) 20%, var(--white) 60%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
   padding-bottom: 20px;
